@@ -1,14 +1,17 @@
-algoritmo "semnome"
+algoritmo "Calculo IMC"
+// Função : Calcular o Indice de Massa Corporea
+// Autor : RVVA
+// Data : 04/01/2022
+// Seção de Declarações 
 var
-   peso, altura: real
-
+   peso, altura, IMC: real
 inicio
-      Escreval ("Peso em kg: ")
+Escreva ("Peso em kg: ")
       Leia (peso)
-      Escreva ("Altura em cm: ")
+      Escreva ("Altura em m: ")
       Leia (altura)
       IMC <- peso / (exp(altura, 2))
-      Se () >= 18.5 e <= 25) entao
+      Se (IMC >= 18.5) e (IMC <= 25) entao
             Escreva ("Você está no seu peso ideal")
       senao
             Escreva ("Você não está no peso ideal")
