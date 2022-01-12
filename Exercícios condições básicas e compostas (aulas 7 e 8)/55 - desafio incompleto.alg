@@ -4,34 +4,39 @@ algoritmo "semnome"
 // Data : 08/01/2022
 // Seção de Declarações 
 var
-   num_maq, palpite, inc: inteiro
+   num_maq, palpite1, palpite2, palpite3, palpite4, inc: inteiro
 inicio
+      escreval ("Você tem 4 tentativas para adivinhar o numero aleatorio que a maquina irá sortear. Boa sorte!")
+
       inc <- 1
-      enquanto inc <= 4 faca
-         escreva("Insira aqui seu palpite (1-10): ")
-         leia (palpite)
-         
-         aleatorio 1, 10
+
+      escreva("Insira aqui seu ", inc, "o. palpite (1-10): ")
+         leia (palpite1)
+      inc <- inc + 1
+      escreva("Insira aqui seu ", inc, "o. palpite (1-10): ")
+         leia (palpite2)
+      escreva("Insira aqui seu ", inc, "o. palpite (1-10): ")
+         leia (palpite3)
+      inc <- inc + 1
+      escreva("Insira aqui seu ", inc, "o. palpite (1-10): ")
+         leia (palpite4)
+      inc <- 1
+      
+      aleatorio 1, 10
          leia(num_maq)
-         aleatorio off
-         Se palpite = num_maq entao
+      aleatorio off
+      
+      Se (palpite1 = num_maq) ou (palpite2 = num_maq) ou (palpite3 = num_maq) ou (palpite4 = num_maq) entao
          escreval ("---------------------")
          escreval ("      RESULTADO      ")
          escreval ("---------------------")
-         escreva("Parabéns! Você ganhou.")
+         escreval("Parabéns! Você ganhou.")
       senao
            escreval ("---------------------")
            escreval ("      RESULTADO      ")
            escreval ("---------------------")
-           escreva("Você perdeu")
+           escreval("Você perdeu!")
+           escreval("-----------------------")
       FimSe
-         
-         inc <- inc + 1
-      fimenquanto
-
-
-      escreval("Seu palpite foi: ", palpite)
-      escreval("O número escolhido pela máquina foi: ", num_maq)
-
 
 fimalgoritmo
